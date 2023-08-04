@@ -66,7 +66,7 @@ body {
 
 .info-card p {
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   margin-top: 1rem;
 }
@@ -179,6 +179,10 @@ input:focus {
   font-weight: 700;
 }
 
+.attribution {
+  margin-top: 2rem;
+}
+
 /* =========================== Media Queries =========================== */
 
 @media screen and (max-width: 400px) {
@@ -190,7 +194,7 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     width: 23.438rem;
-    min-height: 90rem;
+    min-height: 80rem;
   }
 
   /* =========================== Info Card =========================== */
@@ -247,5 +251,9 @@ input:focus {
 
   .subBtn {
     width: 19rem;
+  }
+
+  .attribution {
+    text-align: center;
   }
 }
