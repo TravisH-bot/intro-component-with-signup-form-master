@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+
+:root {
+  /* Font */
+  --font: "Poppins", sans-serif;
+
+  /* Primary Colors */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --dark-green: hsl(154, 58%, 38%);
+  --green-opaque: hsla(154, 59%, 51%, 0.5);
+
+  /* Accent Color */
+  --blue: hsl(248, 32%, 49%);
+
+  /* Neutral Colors */
+  --dark-blue: hsl(249, 10%, 26%);
+  --dark-blue-opaque: hsla(249, 10%, 26%, 0.3);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  height: 100svh;
+  background-color: var(--red);
+  background-image: url("./images/bg-intro-desktop.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* =========================== Main Container =========================== */
+
+.main-container {
+  width: 90rem;
+  height: 42rem;
+  display: flex;
+}
+
+/* =========================== Info Card =========================== */
+
+.info-card {
+  /* background-color: lightseagreen; */
+  width: 45rem;
+  height: 42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 8rem;
+}
+
+.info-card h1 {
+  color: var(--white);
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+/* =========================== Form Card =========================== */
+
+.form-card {
+  width: 45rem;
+  height: 42rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.try {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 45rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 0.5rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 0.5rem 0 var(--dark-blue-opaque);
+}
+
+.try span {
+  font-weight: 700;
+}
+
+.signup-form {
+  background-color: var(--white);
+  height: 36.2rem;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0 var(--dark-blue-opaque);
+}
+
+.signup-form input {
+  height: 4rem;
+  width: 39rem;
+  margin-bottom: 1.8rem;
+  border-radius: 0.3rem;
+  border: 0.13rem solid var(--grayish-blue);
+  padding-left: 2rem;
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-size: 1.03rem;
+  outline: none;
+}
+
+input:focus {
+  outline-color: none;
+  border-color: var(--dark-blue);
+}
+
+.subBtn {
+  background-color: var(--green);
+  color: var(--white);
+  height: 4rem;
+  width: 39rem;
+  border: none;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  cursor: pointer;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+}
+
+.subBtn:focus {
+  box-shadow: var(--dark-green) 0 0 0 1.5px inset,
+    rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    var(--dark-green) 0 -3px 0 inset;
+}
+
+.subBtn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--dark-green) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.subBtn:active {
+  box-shadow: var(--dark-green) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.signup-form p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--grayish-blue);
+}
+
+.signup-form a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* =========================== Media Queries =========================== */
+
+@media screen and (max-width: 400px) {
+  body {
+    height: 60rem;
+  }
+
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 23.438rem;
+    min-height: 90rem;
+  }
+
+  /* =========================== Info Card =========================== */
+
+  .info-card {
+    margin-top: 15rem;
+    width: 23.438rem;
+    height: 22rem;
+    padding-right: 0;
+  }
+
+  .info-card h1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding: 0 1rem 0 1rem;
+    margin-bottom: 0;
+  }
+
+  .info-card p {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem 1rem 2rem 1rem;
+    margin-top: 0;
+  }
+
+  /* =========================== Form Card =========================== */
+
+  .form-card {
+    width: 23.438rem;
+    height: 38rem;
+    align-items: center;
+  }
+
+  .try {
+    text-align: center;
+    width: 21rem;
+    height: 7rem;
+    padding: 1rem 3rem;
+  }
+
+  .signup-form {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 21rem;
+  }
+
+  .signup-form input {
+    width: 19rem;
+    margin-bottom: 1rem;
+  }
+
+  .subBtn {
+    width: 19rem;
+  }
+}
