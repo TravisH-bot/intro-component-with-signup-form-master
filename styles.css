@@ -48,7 +48,6 @@ body {
 /* =========================== Info Card =========================== */
 
 .info-card {
-  /* background-color: lightseagreen; */
   width: 45rem;
   height: 44rem;
   display: flex;
@@ -109,35 +108,21 @@ body {
   box-shadow: 0 0.5rem 0 var(--dark-blue-opaque);
 }
 
-.signup-form input {
+input {
   height: 4rem;
   width: 39rem;
   margin-bottom: 1.8rem;
   border-radius: 0.3rem;
-  border: 0.13rem solid var(--grayish-blue);
   padding-left: 2rem;
   color: var(--dark-blue);
   font-weight: 700;
   font-size: 1.03rem;
+  border: 0.1rem solid var(--grayish-blue);
   outline: none;
 }
 
 input:focus {
-  outline-color: none;
-  border-color: var(--dark-blue);
-}
-
-.error-msg {
-  font-size: 0.8rem;
-  text-align: end;
-  color: var(--red);
-  margin-top: -2.2rem;
-  padding-bottom: 1rem;
-  display: none;
-}
-
-.error-msg img {
-  transform: translate(10rem, -2.4rem);
+  border: 0.2rem solid var(--dark-blue);
 }
 
 .subBtn {
@@ -200,6 +185,36 @@ input:focus {
   margin-top: 2rem;
 }
 
+.input-value label {
+  display: none;
+}
+
+.error-msg,
+.error-img {
+  display: none;
+}
+.input-value.error .error-msg,
+.input-value.error .error-img {
+  display: block;
+}
+
+.error input {
+  border: 0.2rem solid var(--red);
+}
+
+.error-img {
+  transform: translate(36rem, -4.5rem);
+}
+
+.error-msg {
+  text-align: right;
+  margin-top: -3.3rem;
+  padding-bottom: 1rem;
+  color: var(--red);
+  font-weight: 500;
+  font-style: italic;
+}
+
 /* =========================== Media Queries =========================== */
 
 @media screen and (max-width: 400px) {
@@ -259,6 +274,7 @@ input:focus {
     flex-direction: column;
     align-items: center;
     width: 21rem;
+    min-height: 30rem;
   }
 
   .signup-form input {
@@ -277,6 +293,19 @@ input:focus {
 
   .subBtn {
     width: 19rem;
+  }
+
+  .error-img {
+    transform: translate(16.5rem, -3.7rem);
+  }
+
+  .error-msg {
+    text-align: right;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--red);
+    margin-top: -2.3rem;
+    font-weight: 500;
   }
 
   .attribution {
